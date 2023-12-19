@@ -12,7 +12,8 @@
 
         main{
             background-color: rgba(255, 255, 255, 0.74);
-            width: 800px;
+            width: 400px;
+            height: 200px;
             padding: 10px;
             margin: auto;
             border:1px solid rgb(255, 255, 255);
@@ -25,16 +26,18 @@
 <br>
 <br>
 <br>
+
 <main>
+
 <CENTER>
     <font face="Helvetica"> 
     <H1>CÁLCULO DE MÉDIA</H1>
    <title>CALCULO DE MEDIA</title>
-   Nota AV1 <input id="AV1" type="number"> <br />
+   Nota AV1 <input id="AV1" type="value"> <br />
    <br>
-   Nota AV2 <input id="AV2" type="number"> <br />
+   Nota AV2 <input id="AV2" type="value"> <br />
    <br>
-   <button onclick="media()">Calcular Média</button>
+   <button onclick="media()" type="reset">Calcular Média</button>
 
    <script type="text/javascript">
 
@@ -45,7 +48,7 @@
      var media = (AV1 + (AV2*2))/3 ;
 
      if(media >= 7){
-           alert("Uau! Aprovado com nota "+media);
+           alert("Uau! Aprovado, sua média é: "+media);
      }
      else if(media <= 3.9){
            alert("Reprovado, sua média é: "+media);
@@ -53,10 +56,8 @@
     if(media >= 4 & media <=6.9 ){
            alert("Você irá para AVF, sua média é: "+media);   
     }
-
-    
+ 
 }
-
  </script>
 </main>
 <br>
@@ -64,12 +65,13 @@
 <br>
 <main>
 <center>
+
 <H1>CÁLCULO DE AVF</H1>
-Nota Média <input id="media" type="number"><BR/>
+Nota Média <input id="media" type="value"><BR/>
 <BR>
-Nota AVF <input id="AVF" type="number"><br/>
+Nota AVF <input id="AVF" type="value"><br/>
 <br>
-<button onclick="mediaavf()">Calcular AVF</button>
+<button onclick="mediaavf()" type="reset">Calcular AVF</button>
 
    <script type="text/javascript">
 
@@ -80,7 +82,7 @@ Nota AVF <input id="AVF" type="number"><br/>
      var mediaavf = (media + avf)/2 ;
 
      if(mediaavf >= 5){
-           alert("Uau! Aprovado "+mediaavf);
+           alert("Uau! Aprovado, sua nota é: "+mediaavf);
      }
      else alert("Reprovado, sua nota é: "+mediaavf)
 
