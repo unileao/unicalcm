@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+    body {
+    height: 100vh;
+    background-image: url("img/unl.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+        }
+
+        main{
+            background-color: rgba(255, 255, 255, 0.74);
+            width: 800px;
+            padding: 10px;
+            margin: auto;
+            border:1px solid rgb(255, 255, 255);
+            border-radius: 15px;
+            background-position: center;
+        }
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<main>
+<CENTER>
+    <font face="Helvetica"> 
+    <H1>CÁLCULO DE MÉDIA</H1>
+   <title>CALCULO DE MEDIA</title>
+   Nota AV1 <input id="AV1" type="number"> <br />
+   <br>
+   Nota AV2 <input id="AV2" type="number"> <br />
+   <br>
+   <button onclick="media()">Calcular Média</button>
+
+   <script type="text/javascript">
+
+    function media(){
+     var AV1 = parseFloat(document.getElementById("AV1").value);
+     var AV2 = parseFloat(document.getElementById("AV2").value);
+
+     var media = (AV1 + (AV2*2))/3 ;
+
+     if(media >= 7){
+           alert("Uau! Aprovado com nota "+media);
+     }
+     else if(media <= 3.9){
+           alert("Reprovado, sua média é: "+media);
+    }
+    if(media >= 4 & media <=6.9 ){
+           alert("Você irá para AVF, sua média é: "+media);   
+    }
+
+    
+}
+
+ </script>
+</main>
+<br>
+<br>
+<br>
+<main>
+<center>
+<H1>CÁLCULO DE AVF</H1>
+Nota Média <input id="media" type="number"><BR/>
+<BR>
+Nota AVF <input id="AVF" type="number"><br/>
+<br>
+<button onclick="mediaavf()">Calcular AVF</button>
+
+   <script type="text/javascript">
+
+    function mediaavf(){
+     var media = parseFloat(document.getElementById("media").value);
+     var avf = parseFloat(document.getElementById("AVF").value);
+
+     var mediaavf = (media + avf)/2 ;
+
+     if(mediaavf >= 5){
+           alert("Uau! Aprovado "+mediaavf);
+     }
+     else alert("Reprovado, sua nota é: "+mediaavf)
+
+    }
+ </script>
+</main>
+</font> <br />
+</CENTER>
+
+
+</head>
+</html>
